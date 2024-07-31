@@ -1,0 +1,27 @@
+<div class="new-task">
+    <div class="task-form">
+        <h1>Añadir Nueva Tarea</h1>
+        <form [formGroup]="taskForm">
+            <div class="padding-item">
+                <span class="p-float-label">
+                    <input pInputText id="title" formControlName="title" />
+                    <label htmlFor="title">Titulo</label>
+                </span>
+            </div>
+            <div class="padding-item">
+                <span class="p-float-label">
+                    <textarea id="float-input" rows="5" cols="30" formControlName="description"
+                        pInputTextarea></textarea>
+                    <label for="float-input">Descripción</label>
+                </span>
+            </div>
+            <div class="padding-item flex">
+                <p-dropdown [options]="status" optionLabel="label" placeholder="Status"
+                    formControlName="status"></p-dropdown>
+            </div>
+            <div class="padding-item">
+                <button pButton pRipple label="Guardar" (click)="createTask()" class="p-button-success"></button>
+            </div>
+        </form>
+    </div>
+</div>

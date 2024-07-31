@@ -1,0 +1,17 @@
+<h1>Recordatorio de tareas</h1>
+
+<div class="time">
+    <p-timeline [value]="tasks" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+                <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-task>
+            <p-card [header]="task.title" [subheader]="task.estimatedDate">
+                <p>{{task.description}}</p>
+                <button pButton label="Editar tarea" class="p-button-text"></button>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="dashboard-layout">
+    <div class="dashboard-task " *ngFor="let task of tasksToShow">
+        <p-card header="{{task.title}}" subheader="hola" [style]="{ width: '360px' }">
+            <p>{{task.description}}</p>
+            <ng-template pTemplate="footer">
+                <p-button label="Terminada" icon="pi pi-check" styleClass="p-button-success"></p-button>
+                <p-button label="En Progreso" icon="pi pi-clock" [style]="{ 'margin-left': '.5em' }"></p-button>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+<div>
+    <p-messages 
+    [(value)]="messages" 
+    [enableService]="false" 
+    [closable]="false" />
+</div>

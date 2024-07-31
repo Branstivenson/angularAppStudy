@@ -1,0 +1,13 @@
+.dashboard-layout{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+:host::ng-deep .p-card{
+    width: 100% !important;
+}:host::ng-deep .p-card-footer{
+    display: flex;
+}:host::ng-deep .p-element{
+    display: flex;
+}

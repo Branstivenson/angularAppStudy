@@ -1,0 +1,6 @@
+<div class="wrap">
+<h1>Aquí están tus tareas etiquetadas como:</h1>
+<h2>{{statusToShow}}</h2>
+</div>
+<b *ngIf="(loadding$ | async)">Cargando... </b>
+<app-p-card-tasks [tasksStatus]="tasksStatus"></app-p-card-tasks>
